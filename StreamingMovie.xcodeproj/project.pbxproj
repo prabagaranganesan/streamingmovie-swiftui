@@ -21,6 +21,7 @@
 		329FD8192764E91C008E62AA /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FD8182764E91C008E62AA /* HomeVM.swift */; };
 		329FD81B2764F975008E62AA /* TopPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FD81A2764F975008E62AA /* TopPreview.swift */; };
 		329FD81D27650DC1008E62AA /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FD81C27650DC1008E62AA /* SmallVerticalButton.swift */; };
+		329FD81F27651565008E62AA /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FD81E27651565008E62AA /* WhiteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		329FD8182764E91C008E62AA /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		329FD81A2764F975008E62AA /* TopPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPreview.swift; sourceTree = "<group>"; };
 		329FD81C27650DC1008E62AA /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
+		329FD81E27651565008E62AA /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				3262307A2763945D0040799B /* StandardHomeView.swift */,
 				3262307E276398820040799B /* HomeView.swift */,
 				329FD81A2764F975008E62AA /* TopPreview.swift */,
+				329FD81E27651565008E62AA /* WhiteButton.swift */,
 				329FD81C27650DC1008E62AA /* SmallVerticalButton.swift */,
 				329FD8182764E91C008E62AA /* HomeVM.swift */,
 				3262307C276394BA0040799B /* GlobalHelper.swift */,
@@ -297,6 +300,7 @@
 				326230492763902D0040799B /* StreamingMovieApp.swift in Sources */,
 				326230792763941F0040799B /* Movie.swift in Sources */,
 				329FD81D27650DC1008E62AA /* SmallVerticalButton.swift in Sources */,
+				329FD81F27651565008E62AA /* WhiteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

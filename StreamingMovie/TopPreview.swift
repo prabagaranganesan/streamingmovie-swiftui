@@ -36,6 +36,8 @@ struct TopPreview: View {
                     ForEach(movie.categories, id: \.self) { category in
                         Text(category)
                             .font(.footnote)
+                            .foregroundColor(.white)
+                        
                         if !caterGoryfirst(category) {
                             Image(systemName: "circle.fill")
                                 .foregroundColor(.blue)
@@ -43,8 +45,32 @@ struct TopPreview: View {
                         }
                         
                     }
+                }.padding(.vertical, 5)
+                
+                HStack {
+                    Spacer()
+                    SmallVerticalButton(isOnImage: "checkmark", isOffImage: "plus", isOn: true, text: "My List") {
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    WhiteButton(text: "play", imageName: "play.fill") {
+                        
+                    }.frame(width: 120)
+                    
+                    Spacer()
+                    SmallVerticalButton(isOnImage: "info.circle", isOffImage: "info.circle", isOn: true, text: "Info") {
+                        
+                    }
+                    Spacer()
                 }
+                
             }
+            .background(
+                LinearGradient.blackOpacityGradient
+                    .padding(.top, 250)
+            ).foregroundColor(.white)
         }
         
         

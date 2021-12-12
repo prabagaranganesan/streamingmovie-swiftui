@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     var viewModel = HomeVM()
+    let screen = UIScreen.main.bounds
     
     var body: some View {
         ZStack {
@@ -18,6 +19,13 @@ struct HomeView: View {
             
             ScrollView {
                 LazyVStack {
+                        TopRowButtons()
+                        
+                        TopPreview(movie: exampleMovie2)
+                            .frame(width: screen.width)
+                            .padding(.top, -110)
+                            .zIndex(-1)
+                    
                     ForEach(viewModel.availableCategory, id: \.self) { category in
                         VStack {
                             HStack {
@@ -26,6 +34,7 @@ struct HomeView: View {
                                     .bold()
                                 Spacer()
                             }
+                            
                             ScrollView(.horizontal, showsIndicators: false, content: {
                                 LazyHStack {
                                     ForEach(viewModel.getMovies(for: category)) { movie in
@@ -40,6 +49,43 @@ struct HomeView: View {
                 }
             }
         }.foregroundColor(.white)
+    }
+}
+
+struct TopRowButtons: View {
+    var body: some View {
+        HStack {
+            Button(action: {
+                
+            }, label: {
+                Image("netflix_logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 50)
+            })
+            
+            Spacer()
+            Button(action: {
+                
+            }, label: {
+                Text("TV Shows")
+            })
+            Spacer()
+            Button(action: {
+                
+            }, label: {
+                Text("Movies")
+            })
+            Spacer()
+            Button(action: {
+                
+            }, label: {
+                Text("My List")
+            })
+                
+        }
+        .padding(.leading, 10)
+        .padding(.trailing, 30)
     }
 }
 

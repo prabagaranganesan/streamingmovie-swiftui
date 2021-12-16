@@ -17,6 +17,8 @@ struct CustomTabSwitcher: View {
                                                             .bold))
     }
     
+    var movie: Movie
+    
     var body: some View {
         VStack {
             ScrollView(.horizontal, showsIndicators: false) {
@@ -48,9 +50,9 @@ struct CustomTabSwitcher: View {
                     
                 }
             case .trailers:
-                Text("Trailers")
+                TrailerList(trailers: movie.trailers)
             case .more:
-                Text("MORE")
+                MoreLikeThis(movies: movie.moreLikeThisMovies)
             }
         }
         .foregroundColor(.white)
@@ -64,7 +66,7 @@ struct CustomTabSwitcher_Previews: PreviewProvider {
             Color.black
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         }
-        CustomTabSwitcher(tabs: [.episodes, .trailers, .more])
+        CustomTabSwitcher(tabs: [.episodes, .trailers, .more], movie: exampleMovie1)
     }
 }
 

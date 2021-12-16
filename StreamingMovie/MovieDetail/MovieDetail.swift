@@ -59,7 +59,7 @@ struct MovieDetail: View {
                         Spacer()
                     }.padding(.leading, 20)
                     
-                    //CustomTabSwitcher()
+                    CustomTabSwitcher(tabs: [.episodes, .more, .trailers])
                 })
             }
             .foregroundColor(.white)

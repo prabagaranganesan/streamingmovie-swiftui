@@ -96,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		320AC4DB276B9E01006EF922 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				32ABDD2E27690454000A5CB4 /* MovieDetail.swift */,
+				323B2019276A568A00553CDA /* CustomTabSwitcher.swift */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
 		3262303C2763902D0040799B = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +128,7 @@
 		326230472763902D0040799B /* StreamingMovie */ = {
 			isa = PBXGroup;
 			children = (
+				320AC4DB276B9E01006EF922 /* MovieDetail */,
 				32ABDD2D2769036E000A5CB4 /* Helpers */,
 				32ABDD2C2769035D000A5CB4 /* Model */,
 				32ABDD2B27690331000A5CB4 /* HelperViews */,
@@ -128,8 +138,6 @@
 				3262304C2763902D0040799B /* Assets.xcassets */,
 				326230512763902D0040799B /* Info.plist */,
 				3262304E2763902D0040799B /* Preview Content */,
-				32ABDD2E27690454000A5CB4 /* MovieDetail.swift */,
-				323B2019276A568A00553CDA /* CustomTabSwitcher.swift */,
 			);
 			path = StreamingMovie;
 			sourceTree = "<group>";

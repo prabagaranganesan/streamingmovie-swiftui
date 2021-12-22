@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct MoreLikeThis: View {
+    
+    var movies: [Movie]
+    var columns = [GridItem(.flexible()),
+                   GridItem(.flexible()),
+                   GridItem(.flexible())]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVGrid(columns: columns) {
+                ForEach(0..<movies.count) { index in
+                    let movie = movies[index]
+                    StandardHomeView(movie: movie)
+                }
+                Spacer()
+            }
+        }
     }
 }
 
 struct MoreLikeThis_Previews: PreviewProvider {
     static var previews: some View {
-        MoreLikeThis()
+        MoreLikeThis(movies: exampleMovies)
     }
 }

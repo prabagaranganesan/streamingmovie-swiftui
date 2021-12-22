@@ -1,20 +1,41 @@
 //
-//  VideoPreviewPlayer.swift
+//  VideoPreviewImage.swift
 //  StreamingMovie
 //
 //  Created by Prabagaran, Ganesan (G.) on 16/12/21.
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
-struct VideoPreviewPlayer: View {
+struct VideoPreviewImage: View {
+    var imageURL: URL
+    var videoURL: URL
+    
+    @State var showVideoPlayer = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            KFImage(imageURL)
+                .resizable()
+            
+            Button(action: {
+                
+            }, label: {
+                Image(systemName: "play.circle")
+                    .foregroundColor(.white)
+                    .font(.system(size: 40))
+            })
+            .sheet(isPresented: $showVideoPlayer, content: {
+                SwiftUIVideoView(url: videoURL)
+            })
+        }
     }
 }
 
 struct VideoPreviewPlayer_Previews: PreviewProvider {
     static var previews: some View {
-        VideoPreviewPlayer()
+        VideoPreviewImage(imageURL: exampleImageURL,
+                          videoURL: exampleVideoURL)
     }
 }
